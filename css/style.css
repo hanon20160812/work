@@ -77,6 +77,7 @@ body {
 	padding: 0;
 	
 	display: none; /*這樣平常才會隱藏起來*/
+	z-index: 1;/*層級往上*/
 }
 
 .nav-list-li{
