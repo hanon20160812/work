@@ -1,0 +1,200 @@
+/* 整體 */
+html {
+	background-color: #869960;
+	box-sizing: border-box;	/* 使其聽從設定之大小 */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;	/* 使其聽從往上一層的繼承 */
+
+}
+
+body {
+	font-family: Tahoma, sans-serif; /*字體設定在body尤佳*/
+	font-size: 87%;
+	text-align: justify; /*文字左右對齊*/
+
+	cursor:url('../images/nat967.cur'),auto; /*游標，一定要加逗號後的宣告*/
+	
+}
+
+
+/* 大區域 */
+.container {
+	
+	background: url(../images/color-tile.png)left bottom repeat-x,url(../images/color-tile.png)left top repeat-x;
+	background-color: #FFF;
+
+
+
+	max-width: 940px; /*最大寬度*/
+	margin-left: auto; /*置中*/
+	margin-right: auto;/*置中*/
+
+	padding: 15px 40px 15px 40px; /*內縮好尺寸，這樣封面照片放進去才不會擋住*/
+}
+
+/* 封面 */
+.header {
+	padding-top: 20px;
+	color: #617140;
+
+	background:url(../images/leaf-title.jpg) right center no-repeat;
+	background-color: #FFF;
+
+
+}
+
+.header-title {
+	margin: 0; /*使其文字與下方文字無間距*/
+	font-weight: normal;
+	font-size: 165%;
+
+}
+
+.header-slogan {
+	margin: 0;
+}
+
+/* 導覽列 */
+.nav{
+	margin-top:20px;
+	position: relative; /*相對位子必須設定才能使子選單能所對應*/
+}
+
+.nav-list{
+	display: flex; /*使導覽列並排*/
+	margin: 0;
+	padding: 0;
+}
+
+.nav-sublist{
+	background-color: #e5e9dc;
+	position: absolute; /*使子選單去尋找相對位子的主選單*/
+	margin: 0;
+	padding: 0;
+	
+	display: none; /*這樣平常才會隱藏起來*/
+}
+
+.nav-list-li{
+list-style: none;  /*使超連結無圓點*/
+margin-right:5px;  /*使超連結有間距*/
+}
+
+.nav-list-li-a{
+	display: block; /*使文字超連結改變屬性*/
+	text-decoration: none; /*使超連結無底線*/
+	color: #617140;
+
+	padding: 10px 20px;
+	border: 3px solid #e5e9dc;
+	border-bottom: none; /*取消底部線條的部分*/
+}
+
+
+
+/* 滑鼠經過選單的設定*/
+
+.nav-list-li-a:hover{
+	background-color: #e5e9dc;
+	color: #FFF;
+
+	box-shadow: 1px 1px 6px 0px #2f3b16; /*陰影*/
+	transition: all .5s; /*轉場*/
+}
+
+
+/*主選單中的經過主選單中的文字，這個寫法也可以*/
+/* .nav-list-li:hover>.nav-list-li-a{  
+	background-color: #e5e9dc; 
+
+}*/
+
+.nav-sublist .nav-list-li-a:hover{  /*子選單+經過主選單的文字*/
+	background-color: #869960;
+	color: #FFF;
+
+	
+}
+
+.nav-list-li:hover .nav-sublist{
+display: block; /*滑鼠經過選單、子選單才會顯示*/
+
+}
+
+
+
+
+
+
+
+
+
+/* 內文 */
+.content-area {
+	display: flex;
+	align-items: flex-start;
+
+	border-top: 3px solid #e5e9dc;
+	border-bottom: 3px solid #e5e9dc;
+
+	
+	
+}
+
+.main-area {
+	width: 66%;
+	padding-right: 40px;
+}
+
+/* 內文圖片 */
+.box{
+position: relative;
+}
+.box-img{
+width: 100%;
+display: block;
+}
+.box-img-h1{
+position: absolute;
+
+width: 200px;
+height: 80px;
+line-height: 80px;  /* 與高一樣數值，才能置中*/
+text-align: center; /*置中*/
+
+color: #FFF;
+background-color: rgba(115, 211, 255, 0.5);
+
+top: 50%;
+left: 50%;
+
+margin: 0px;
+margin-left: -100px;
+margin-top: -40px;
+
+}
+
+
+
+/* 左欄 */
+.sidebar {
+	width: 34%;
+	background-color: #e5e9dc;
+	padding: 20px 40px;
+	font-size: 85%;
+	
+}
+
+
+/* 尾端 */
+.footer {
+	text-align: center;
+	font-size: 85%;
+	color: #999;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
